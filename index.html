@@ -154,7 +154,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("hero-bg.jpg");
+  background-image: url("hero-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -253,11 +253,23 @@
       border-radius: 999px;
       background: #22c55e;
     }
+    
+    .hero-cards-wrapper {
+      margin-top: -70px;
+      position: relative;
+      z-index: 10;
+      display: flex;        /* Needed to center inside wrapper */
+      justify-content: center;
+      width: 100%;
+    }
 
     .hero-cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
+      max-width: 75%;
+      width: 100%;
+      margin: 0 auto;       /* centers the card grid */
     }
 
     .hero-card {
@@ -892,7 +904,9 @@
           <span>Trusted HR & IT advisory</span>
         </div>
       </div>
-
+    </div>
+  </section>
+  <section id="home" class="hero-cards-wrapper">
       <div class="hero-cards">
         <article class="hero-card">
           <div class="hero-card-label">Consulting</div>
@@ -924,7 +938,6 @@
           </ul>
         </article>
       </div>
-    </div>
   </section>
 
   <!-- ABOUT ENGAGGIO -->
