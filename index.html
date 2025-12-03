@@ -139,39 +139,36 @@
     /* HERO – Welcome to Engaggio */
 
     .hero {
-      position: relative;
-      color: white;
-      padding-top: 48px;
-      padding-bottom: 96px;
-      overflow: hidden;
-    }
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  color: #fff;
+  overflow: hidden;
+}
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-          120deg,
-          rgba(15, 23, 42, 0.80),
-          rgba(15, 23, 42, 0.45)
-        ),
-        url("hero-bg.jpg") center/cover no-repeat;
-      z-index: -2;
-    }
+/* REMOVE ANY gradient background here */
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(
-        circle at 20% 0,
-        rgba(59, 130, 246, 0.45),
-        transparent 55%
-      );
-      mix-blend-mode: soft-light;
-      opacity: 0.9;
-      z-index: -1;
-    }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* dark overlay */
+  z-index: -1;
+}
+
 
     .hero-grid {
       display: grid;
