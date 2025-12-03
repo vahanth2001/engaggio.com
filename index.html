@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Engaggio – HR, IT & AI Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --primary: #0b63ce;
+      --primary-dark: #053568;
+      --accent: #ff3c7d;
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --bg-light: #f9fafb;
+      --card-bg: #ffffff;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.12);
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --transition-fast: 0.2s ease-out;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text-main);
+      background: white;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout helpers */
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Header & navigation */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+    }
+
+    .logo-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #4f9dff, var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 2px;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO – Welcome to Engaggio */
+
+    .hero {
+      position: relative;
+      color: white;
+      padding-top: 48px;
+      padding-bottom: 96px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+          120deg,
+          rgba(15, 23, 42, 0.80),
+          rgba(15, 23, 42, 0.45)
+        ),
+        url("hero-bg.jpg") center/cover no-repeat;
+      z-index: -2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at 20% 0,
+        rgba(59, 130, 246, 0.45),
+        transparent 55%
+      );
+      mix-blend-mode: soft-light;
+      opacity: 0.9;
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.7fr);
+      gap: 40px;
+      align-items: flex-end;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 3vw + 1rem, 3.4rem);
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      max-width: 480px;
+      color: rgba(241, 245, 249, 0.92);
+      margin-bottom: 24px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast),
+        color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.55);
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: white;
+      background: transparent;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.5);
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      font-size: 0.9rem;
+      color: rgba(229, 231, 235, 0.9);
+    }
+
+    .hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-meta-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .hero-card {
+      background: rgba(15, 23, 42, 0.88);
+      border-radius: 18px;
+      padding: 18px 16px 16px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      transform-origin: center bottom;
+      transition: transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
+    }
+
+    .hero-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 50px rgba(15, 23, 42, 0.85);
+      border-color: rgba(248, 250, 252, 0.7);
+    }
+
+    .hero-card-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: rgba(148, 163, 184, 0.9);
+      margin-bottom: 4px;
+    }
+
+    .hero-card-title {
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-list {
+      list-style: none;
+      font-size: 0.8rem;
+      color: rgba(209, 213, 219, 0.9);
+    }
+
+    .hero-card-list li + li {
+      margin-top: 3px;
+    }
+
+    /* ABOUT ENGAGGIO */
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-media {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+    }
+
+    .about-media::after {
+      content: "";
+      position: absolute;
+      inset: auto auto 16px 16px;
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.88);
+      color: white;
+      font-size: 0.8rem;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .about-media::after {
+      content: "15+ Years Experience\nHR • IT • AI";
+      white-space: pre-line;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-sub {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+
+    .about-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 18px;
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+      color: var(--text-muted);
+    }
+
+    .about-list li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: 900;
+      margin-right: 6px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 4px 10px;
+      background: white;
+    }
+
+    /* GET READY TO BUILD YOUR BUSINESS */
+
+    .build-section {
+      background: radial-gradient(circle at top left, #e0f2fe, #eff6ff 55%, #ffffff);
+    }
+
+    .build-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .build-media {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .build-title {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .build-sub {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      max-width: 460px;
+    }
+
+    .build-points {
+      list-style: none;
+      margin-bottom: 18px;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .build-points li + li {
+      margin-top: 6px;
+    }
+
+    .build-points li::before {
+      content: "▹";
+      color: var(--primary);
+      margin-right: 6px;
+    }
+
+    /* SLIDER WITH ROTATING MESSAGES */
+
+    .slider-section {
+      background: linear-gradient(180deg, #eff6ff, #ffffff);
+    }
+
+    .slider {
+      border-radius: var(--radius-xl);
+      background: #ffffff;
+      box-shadow: var(--shadow-soft);
+      padding: 24px 26px;
+    }
+
+    .slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      gap: 10px;
+    }
+
+    .slider-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .slider-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+    }
+
+    .slider-btn:hover {
+      background: #eff6ff;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #d1d5db;
+    }
+
+    .dot.active {
+      width: 16px;
+      background: var(--primary);
+    }
+
+    .slider-items {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .slider-card {
+      border-radius: 18px;
+      padding: 16px 16px 14px;
+      background: #f9fafb;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      transition: background var(--transition-fast), transform var(--transition-fast),
+        box-shadow var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .slider-card strong {
+      display: block;
+      font-size: 0.94rem;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+
+    .slider-card:hover {
+      background: white;
+      transform: translateY(-2px);
+      border-color: rgba(148, 163, 184, 0.8);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15);
+    }
+
+    /* OUR SERVICES OVERVIEW */
+
+    .services-section {
+      background: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .service-card {
+      border-radius: var(--radius-lg);
+      padding: 18px 16px;
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
+      font-size: 0.94rem;
+      transition: transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+    }
+
+    .service-card h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .service-card p {
+      font-size: 0.85rem;
+      color: rgba(241, 245, 249, 0.9);
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      background: #0f5ad0;
+      box-shadow: 0 22px 50px rgba(30, 64, 175, 0.55);
+    }
+
+    /* PRODUCT SUITE SHOWCASE */
+
+    .products-section {
+      background: var(--bg-light);
+    }
+
+    .products-strip {
+      margin-top: 26px;
+      background: var(--primary);
+      border-radius: var(--radius-xl);
+      padding: 24px 22px 26px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 16px 14px 14px;
+      font-size: 0.9rem;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.18);
+      transition: transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+    }
+
+    .product-card h3 {
+      font-size: 0.96rem;
+      margin-bottom: 7px;
+      color: var(--text-main);
+    }
+
+    .product-card ul {
+      list-style: none;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .product-card ul li + li {
+      margin-top: 3px;
+    }
+
+    .product-card ul li::before {
+      content: "•";
+      color: var(--primary);
+      margin-right: 4px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+    }
+
+    /* WHY CHOOSE US */
+
+    .why-grid {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .why-card {
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 18px 16px 16px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      transition: transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
+    }
+
+    .why-card h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .why-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 0.25);
+      border-color: rgba(148, 163, 184, 0.9);
+    }
+
+    /* CONNECT WITH US */
+
+    .connect-section {
+      background: #f9fafb;
+    }
+
+    .connect-grid {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .connect-map {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      background: #e5e7eb;
+      position: relative;
+    }
+
+    .connect-map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .connect-card {
+      border-radius: var(--radius-xl);
+      background: white;
+      box-shadow: var(--shadow-soft);
+      padding: 22px 22px 20px;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 0.94rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .contact-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .contact-label {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .contact-value {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--primary-dark);
+      color: rgba(226, 232, 240, 0.85);
+      padding: 22px 0 26px;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(226, 232, 240, 0.9);
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 980px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.2fr);
+      }
+
+      .hero-cards {
+        margin-top: 16px;
+      }
+
+      .split,
+      .build-grid,
+      .connect-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .about-list {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .services-grid,
+      .product-grid,
+      .why-grid,
+      .slider-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      header {
+        position: static;
+      }
+
+      .nav {
+        height: auto;
+        padding: 10px 0 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        padding-top: 36px;
+        padding-bottom: 72px;
+      }
+
+      .hero-cards {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      section {
+        padding: 52px 0;
+      }
+
+      .services-grid,
+      .product-grid,
+      .why-grid,
+      .slider-items {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .build-grid {
+        gap: 26px;
+      }
+
+      .slider {
+        padding: 18px 16px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="logo-badge">E</div>
+        <span>Engaggio</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About us</a>
+        <a href="#services">Services</a>
+        <a href="#products">Product Suite</a>
+        <a href="#why-us">Why choose us</a>
+        <a href="#connect">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO: WELCOME TO ENGAGGIO -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1 class="hero-title">Welcome to Engaggio</h1>
+        <p class="hero-sub">
+          Innovative solutions for HR and IT to drive your business forward —
+          combining strategy, people, and AI-powered technology.
+        </p>
+
+        <div class="hero-cta">
+          <button class="btn btn-primary">Talk to our experts</button>
+          <button class="btn btn-ghost">Explore solutions</button>
+        </div>
+
+        <div class="hero-meta">
+          <span><span class="hero-meta-dot"></span> Live AI & HR demos</span>
+          <span>Trusted HR & IT advisory</span>
+        </div>
+      </div>
+
+      <div class="hero-cards">
+        <article class="hero-card">
+          <div class="hero-card-label">Consulting</div>
+          <div class="hero-card-title">HR Consulting</div>
+          <ul class="hero-card-list">
+            <li>Employee engagement strategy</li>
+            <li>Org structure & workforce planning</li>
+            <li>Performance & rewards design</li>
+          </ul>
+        </article>
+
+        <article class="hero-card">
+          <div class="hero-card-label">Technology</div>
+          <div class="hero-card-title">IT & AI Services</div>
+          <ul class="hero-card-list">
+            <li>Custom apps & Oracle implementations</li>
+            <li>AI chatbots & voice call desk</li>
+            <li>Process automation & analytics</li>
+          </ul>
+        </article>
+
+        <article class="hero-card">
+          <div class="hero-card-label">Platforms</div>
+          <div class="hero-card-title">Product Suite</div>
+          <ul class="hero-card-list">
+            <li>Engagement surveys & dashboards</li>
+            <li>Workforce tracker & PMS</li>
+            <li>AI call desk & HR command center</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ENGAGGIO -->
+  <section id="about">
+    <div class="container split">
+      <div class="about-media">
+        <img src="about-engaggio.jpg" alt="Engaggio team collaborating in a modern office" />
+      </div>
+      <div>
+        <div class="eyebrow">About Engaggio</div>
+        <h2 class="section-title">Driving the future of HR, IT & AI.</h2>
+        <p class="section-sub">
+          Engaggio blends deep HR domain expertise with cutting-edge technology
+          to help organizations scale, automate, and transform. Our consultants
+          and engineers partner with you to design operating models, deploy
+          digital platforms, and unlock workforce insights.
+        </p>
+        <ul class="about-list">
+          <li>Employee engagement strategy & culture design</li>
+          <li>Organization structure and workforce planning</li>
+          <li>Performance management & OKR frameworks</li>
+          <li>HR policies, SOPs, compliance & HRMS adoption</li>
+          <li>Compensation planning & skill mapping</li>
+          <li>CHRO-as-a-Service (fractional leadership)</li>
+        </ul>
+        <div class="badge-row">
+          <span class="badge">HR Consulting</span>
+          <span class="badge">IT & AI Services</span>
+          <span class="badge">Product Implementation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET READY TO BUILD YOUR BUSINESS -->
+  <section class="build-section">
+    <div class="container build-grid">
+      <div class="build-media">
+        <img src="build-business.jpg" alt="Leader planning growth strategy with a laptop" />
+      </div>
+      <div>
+        <div class="eyebrow">Scale with confidence</div>
+        <h2 class="build-title">Get Ready to Build Your Business.</h2>
+        <p class="build-sub">
+          Streamline operations, leverage AI, and align people, process, and
+          platforms. Engaggio gives you the building blocks to grow faster with
+          fewer friction points.
+        </p>
+        <ul class="build-points">
+          <li>Blueprint your HR operating model and organization design.</li>
+          <li>Digitize HR, operations, and admin workflows end-to-end.</li>
+          <li>Bring real-time visibility into workforce performance.</li>
+          <li>Activate predictive insights for smarter decisions.</li>
+        </ul>
+        <button class="btn btn-primary">Start a project</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER WITH ROTATING MESSAGES -->
+  <section class="slider-section">
+    <div class="container">
+      <div class="slider">
+        <div class="slider-header">
+          <div>
+            <div class="eyebrow">What you can achieve</div>
+            <h2 class="section-title">A Slider with Rotating Messages</h2>
+            <p class="section-sub">
+              Cycle through outcomes our clients deliver with Engaggio’s
+              consulting, platforms, and AI services.
+            </p>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="sliderPrev" aria-label="Previous slide">←</button>
+            <div class="dots">
+              <div class="dot active" data-slide="0"></div>
+              <div class="dot" data-slide="1"></div>
+              <div class="dot" data-slide="2"></div>
+            </div>
+            <button class="slider-btn" id="sliderNext" aria-label="Next slide">→</button>
+          </div>
+        </div>
+
+        <div class="slider-items" id="sliderItems">
+          <!-- Slide 1 (default visible) -->
+          <div class="slider-card" data-slide-index="0">
+            <strong>Automate HR</strong>
+            Use workflows, chatbots, and HRMS to remove manual tasks and ensure
+            consistent, compliant processes.
+          </div>
+          <div class="slider-card" data-slide-index="0">
+            <strong>Boost Productivity</strong>
+            Track attendance, idle time, and utilization to unlock higher
+            productivity across teams and locations.
+          </div>
+          <div class="slider-card" data-slide-index="0">
+            <strong>Enhance Engagement</strong>
+            Pulse surveys, heat maps, and manager dashboards identify where to
+            act to improve employee experience.
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slider-card" data-slide-index="1" style="display:none;">
+            <strong>Predict Performance</strong>
+            Combine OKRs, KPIs, and AI-based scoring to forecast outcomes and
+            focus development efforts.
+          </div>
+          <div class="slider-card" data-slide-index="1" style="display:none;">
+            <strong>Unify Data</strong>
+            Integrate HR, operations, and financial data to build a single pane
+            of glass for leaders.
+          </div>
+          <div class="slider-card" data-slide-index="1" style="display:none;">
+            <strong>Delight Employees</strong>
+            Self-service portals and conversational assistants meet employees
+            where they are — web, mobile, or voice.
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slider-card" data-slide-index="2" style="display:none;">
+            <strong>Modernize Processes</strong>
+            Re-imagine procedures and SOPs with digital forms, approvals, and
+            automated escalations.
+          </div>
+          <div class="slider-card" data-slide-index="2" style="display:none;">
+            <strong>Scale Securely</strong>
+            Cloud-ready architectures and enterprise-grade security keep growth
+            compliant and resilient.
+          </div>
+          <div class="slider-card" data-slide-index="2" style="display:none;">
+            <strong>Make Better Decisions</strong>
+            Dashboards and analytics give HR and business leaders real-time,
+            actionable insight.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR SERVICES OVERVIEW -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="eyebrow">Our services overview</div>
+      <h2 class="section-title">Driving results with our cutting-edge technology.</h2>
+      <p class="section-sub">
+        From strategy to implementation, we help you automate HR, optimize
+        operations, and unlock human potential.
+      </p>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Automate HR</h3>
+          <p>Digitize HR processes, SOPs, and workflows to reduce manual work.</p>
+        </article>
+        <article class="service-card">
+          <h3>Boost Productivity</h3>
+          <p>Track workforce activity and transform insights into performance.</p>
+        </article>
+        <article class="service-card">
+          <h3>Predict Performance</h3>
+          <p>Use OKRs, KPIs, and AI to identify high-impact talent actions.</p>
+        </article>
+        <article class="service-card">
+          <h3>Enhance Engagement</h3>
+          <p>Listen to employees and act fast with data-driven interventions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT SUITE SHOWCASE -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <div class="eyebrow">Product Suite</div>
+      <h2 class="section-title">Product Suite Showcase.</h2>
+      <p class="section-sub">
+        Empower HR, managers, and leadership teams with Engaggio’s integrated
+        product stack — built to work together from day one.
+      </p>
+
+      <div class="products-strip">
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Engagement Survey Tool</h3>
+            <ul>
+              <li>Custom survey design & templates</li>
+              <li>Engagement index & heat maps</li>
+              <li>Manager dashboards & drill-downs</li>
+              <li>Predictive insights for interventions</li>
+            </ul>
+          </article>
+
+          <article class="product-card">
+            <h3>AI Call Desk & HR Dashboard</h3>
+            <ul>
+              <li>Voice + chat in 140+ languages</li>
+              <li>Smart call routing & FAQ automation</li>
+              <li>Ticketing integration with existing tools</li>
+              <li>Real-time HR command center</li>
+            </ul>
+          </article>
+
+          <article class="product-card">
+            <h3>Workforce Tracker</h3>
+            <ul>
+              <li>Entry/exit analytics & time insights</li>
+              <li>Idle &gt;10 min alerts and notifications</li>
+              <li>Supervisor dashboards & live views</li>
+              <li>Daily, weekly, monthly reporting</li>
+            </ul>
+          </article>
+
+          <article class="product-card">
+            <h3>PMS (OKR / KPI)</h3>
+            <ul>
+              <li>OKR & KPI tracking for teams and roles</li>
+              <li>Quarterly & annual appraisal cycles</li>
+              <li>360° feedback and dev plans</li>
+              <li>AI-based performance prediction</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why-us">
+    <div class="container">
+      <div class="eyebrow">Why Engaggio</div>
+      <h2 class="section-title">Why Choose Us.</h2>
+      <p class="section-sub">
+        Providing top-tier solutions that drive organizational growth, employee
+        experience, and sustainable performance.
+      </p>
+
+      <div class="why-grid">
+        <article class="why-card">
+          <h3>Expertise</h3>
+          <p>
+            15+ years of HR, IT, and AI industry experience across sectors and
+            geographies.
+          </p>
+        </article>
+        <article class="why-card">
+          <h3>Automation-First</h3>
+          <p>
+            Innovative solutions centered on AI, chatbots, and workflow
+            automation from day one.
+          </p>
+        </article>
+        <article class="why-card">
+          <h3>Scalable Solutions</h3>
+          <p>
+            Custom and cloud-based options designed to scale with every stage of
+            your growth journey.
+          </p>
+        </article>
+        <article class="why-card">
+          <h3>Enterprise Security</h3>
+          <p>
+            Robust data protection practices with compliance-driven
+            architectures.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT WITH US -->
+  <section id="connect" class="connect-section">
+    <div class="container">
+      <div class="eyebrow">Connect</div>
+      <h2 class="section-title">Connect With Us.</h2>
+      <p class="section-sub">
+        Have a challenge to solve or a transformation to launch? Let’s design
+        it together.
+      </p>
+
+      <div class="connect-grid">
+        <div class="connect-map">
+          <!-- Replace src with your real map embed -->
+          <iframe
+            title="Engaggio Location"
+            loading="lazy"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12000!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v0000000000"
+          ></iframe>
+        </div>
+
+        <div class="connect-card">
+          <div class="contact-row">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">info@engaggio.com</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">+91-00000-00000</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Address</div>
+              <div class="contact-value">
+                Engaggio HQ<br />
+                Your Business District,<br />
+                City, Country 000000
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Engaggio. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#connect">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple slider logic
+    const cards = Array.from(document.querySelectorAll(".slider-card"));
+    const dots = Array.from(document.querySelectorAll(".dot"));
+    let currentSlide = 0;
+    const slidesCount = dots.length;
+
+    function showSlide(index) {
+      currentSlide = index;
+      cards.forEach((card) => {
+        const slideIndex = Number(card.getAttribute("data-slide-index"));
+        card.style.display = slideIndex === index ? "block" : "none";
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    document.getElementById("sliderPrev").addEventListener("click", () => {
+      const next = (currentSlide - 1 + slidesCount) % slidesCount;
+      showSlide(next);
+    });
+
+    document.getElementById("sliderNext").addEventListener("click", () => {
+      const next = (currentSlide + 1) % slidesCount;
+      showSlide(next);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => showSlide(index));
+    });
+
+    // Ensure initial layout is correct
+    showSlide(0);
+  </script>
+</body>
+</html>
