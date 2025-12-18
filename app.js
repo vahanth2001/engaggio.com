@@ -100,25 +100,6 @@ const pages = {
       </ul>
     </div>
   </div>
-
-  <div class="footer-bottom">
-    © 2025 Engaggio. All rights reserved.
-  </div>
-</footer>
-
-</body>
-</html>
-
-
-<!-- TRUST -->
-<section class="trust">
-  <div class="container">
-    <h2>Built on Trust. Designed for Responsibility.</h2>
-    <p>Privacy-first. Consent-led. Ethical AI by design.</p>
-    <br/>
-    <button class="btn-primary">Request a Demo</button>
-  </div>
-</section>
   `,
 
   education: `
