@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Engaggio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Header interactions -->
+  <script defer src="main.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="assets/logo-bgr.png" alt="Engaggio Logo">
+    </div>
+
+    <!-- DESKTOP ACTIONS -->
+    <div class="header-actions">
+
+      <!-- SEARCH -->
+      <div class="header-search">
+        <button id="searchToggle" class="search-toggle" aria-expanded="false">
+          <i class="fa fa-search"></i>
+        </button>
+        <input id="searchInput" class="search-input" type="text" placeholder="Search…" />
+      </div>
+
+      <!-- SOCIAL -->
+      <div class="header-social">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- NAV -->
+    <nav class="nav-links" id="mobileMenu">
+      <a href="#home">Home</a>
+      <div class="nav-dropdown">
+        <a href="#what-we-do" class="nav-trigger">What we do <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="#cadmus">CADMUS</a>
+          <a href="#decode">DECODE</a>
+          <a href="#horus">HORUS</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="#Who-are-we" class="nav-trigger">Who are we <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="#Engaggio-overview">Engaggio Overview</a>
+          <a href="#leadership">Leadership & HR</a>
+          <a href="#education">Education</a>
+          <a href="#enterprise">Enterprise</a>
+        </div>
+      </div>
+      <a href="#insights">Insights</a>
+      <a href="#contact" class="btn-outline">Request a Demo</a>
+    </nav>
+
+
+  </div>
+</header>
+
+<!-- PAGE CONTENT (SPA INJECTS HERE) -->
+<main id="app"></main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-bottom">
+    © <span id="year"></span> Engaggio. All rights reserved.
+  </div>
+</footer>
+
+<!-- SPA ROUTER -->
+<script src="app.js"></script>
+</body>
+</html>
