@@ -4,16 +4,16 @@ const pages = {
   home: `
 <body>
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
+<section class="hero-home">
+  <div class="hero-home-content">
     <h1>Understanding Humans. Improving Performance.</h1>
     <p>
       Engaggio is a People Intelligence and AI technology company helping organisations
       and learning ecosystems understand engagement, wellbeing, and behaviour.
     </p>
-    <div class="hero-actions">
+    <div class="hero-home-actions">
       <button class="btn-primary">Request a Demo</button>
-      <button class="btn-secondary">Explore Our Platforms</button>
+      <button class="btn-primary">Explore Our Platform</button>
     </div>
   </div>
 </section>
@@ -60,46 +60,6 @@ const pages = {
     <button class="btn-primary">Request a Demo</button>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div>
-      <h4>Platforms</h4>
-      <ul>
-        <li><a href="#">CADMUS</a></li>
-        <li><a href="#">DECODE</a></li>
-        <li><a href="#">HORUS</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Solutions</h4>
-      <ul>
-        <li><a href="#">For Education</a></li>
-        <li><a href="#">For Enterprises</a></li>
-        <li><a href="#">For Leadership & HR</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">About Engaggio</a></li>
-        <li><a href="#">Trust & Ethics</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Insights</h4>
-      <ul>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Case Studies</a></li>
-        <li><a href="#">Resources</a></li>
-      </ul>
-    </div>
-  </div>
   `,
 
   education: `
