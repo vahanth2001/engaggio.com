@@ -145,6 +145,64 @@ const pages = {
     </div>
   </div>
 </section>
+<!-- PINNED HOW IT WORKS -->
+<section class="how-it-works pinned">
+  <div class="container how-it-works-grid">
+
+    <div class="how-it-works-media">
+      <img src="assets/home1.png" alt="Professional working with technology" />
+    </div>
+
+    <div class="how-it-works-content">
+      <div class="eyebrow">HOW IT WORKS</div>
+
+      <h2>
+        Turning human insight into<br />
+        responsible action.
+      </h2>
+
+      <p class="intro">
+        Engaggio helps organisations listen to people, understand behaviour,
+        and act ethically to improve outcomes across learning and work.
+      </p>
+
+      <ul class="how-steps">
+        <li>
+          <span>01</span>
+          <div>
+            <strong>Listen</strong>
+            Capture engagement, wellbeing, and behavioural signals with
+            consent-led, privacy-first design.
+          </div>
+        </li>
+
+        <li>
+          <span>02</span>
+          <div>
+            <strong>Understand</strong>
+            Apply people intelligence and ethical AI to surface patterns,
+            risks, and opportunities.
+          </div>
+        </li>
+
+        <li>
+          <span>03</span>
+          <div>
+            <strong>Act</strong>
+            Enable leaders and institutions to take timely, informed,
+            and responsible action.
+          </div>
+        </li>
+      </ul>
+
+      <button class="btn-primary">Request a Demo</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- REQUIRED SPACER -->
+<div class="how-it-works-spacer"></div>
 
 <!-- TRUST -->
 <section class="trust">
@@ -316,7 +374,171 @@ const pages = {
         <button>Submit</button>
       </form>
     </section>
-  `
+  `,
+
+  cadmus:`
+  <section class= "product-hero">
+  <div class="container product-hero-grid">
+
+    <div class="product-hero-content">
+      <span class="eyebrow">CADMUS PLATFORM</span>
+
+      <h1>
+        Understanding learners<br />
+        beyond academics.
+      </h1>
+
+      <p class="product-sub">
+        CADMUS is the world’s first holistic engagement intelligence platform
+        designed to understand emotional, social, and behavioural wellbeing —
+        ethically, responsibly, and without academic judgement.
+      </p>
+
+      <div class="product-actions">
+        <button class="btn-primary">Request a Demo</button>
+        <button class="btn-outline">Talk to Us</button>
+      </div>
+    </div>
+
+    <div class="product-hero-media">
+      <img src="assets/cadmus-hero.png" alt="Student wellbeing intelligence illustration" />
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WHY CADMUS -->
+<section class="product-section bg-soft">
+  <div class="container narrow">
+
+    <h2 class="section-title">Why CADMUS</h2>
+
+    <p class="section-lead">
+      Learning outcomes are shaped long before grades appear.
+      Emotional wellbeing, belonging, motivation, and confidence
+      determine how learners engage, grow, and perform.
+    </p>
+
+    <p>
+      CADMUS makes these invisible factors visible —
+      without diagnosis, labelling, or academic evaluation.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- WHAT CADMUS HELPS YOU UNDERSTAND -->
+<section class="product-section">
+  <div class="container">
+
+    <h2 class="section-title">What CADMUS Helps You Understand</h2>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <h3>Emotional Wellbeing</h3>
+        <p>Early signals around emotional comfort, balance, and stress patterns.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Social Connectedness</h3>
+        <p>Understand inclusion, peer harmony, and social safety.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Motivation & Engagement</h3>
+        <p>Track interest, curiosity, and participation trends over time.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Confidence & Resilience</h3>
+        <p>See how learners express themselves and cope with challenges.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Behavioural Stability</h3>
+        <p>Identify consistency, volatility, and emerging support needs.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>AI-Guided Recommendations</h3>
+        <p>Clear, age-appropriate guidance for families and institutions.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="product-section bg-soft">
+  <div class="container narrow">
+
+    <h2 class="section-title">How CADMUS Works</h2>
+
+    <ul class="process-list">
+      <li><strong>Secure login</strong> for every learner</li>
+      <li><strong>Short, age-appropriate check-ins</strong></li>
+      <li><strong>Pattern-based analysis</strong> over time</li>
+      <li><strong>Clear reports</strong> for families and institutions</li>
+    </ul>
+
+    <p class="muted-note">
+      No academic evaluation. No diagnosis. No labelling.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- TRUST -->
+<section class="product-section">
+  <div class="container narrow">
+
+    <h2 class="section-title">Built for Trust & Safety</h2>
+
+    <div class="trust-grid">
+      <span>Privacy-first & consent-led</span>
+      <span>Role-based access</span>
+      <span>Non-diagnostic insights</span>
+      <span>Child-safe by design</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WHO IT IS FOR -->
+<section class="product-section bg-soft">
+  <div class="container narrow">
+
+    <h2 class="section-title">Who CADMUS Is For</h2>
+
+    <ul class="audience-list">
+      <li>Learning institutions & ecosystems</li>
+      <li>Wellbeing and student support teams</li>
+      <li>Families and caregivers</li>
+      <li>Academic and institutional leadership</li>
+    </ul>
+
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<section class="product-cta">
+  <div class="container narrow">
+    <h2>See CADMUS in Action</h2>
+    <p>
+      Experience a responsible, insight-driven approach to learner
+      engagement and wellbeing.
+    </p>
+    <button class="btn-primary">Request a Demo</button>
+  </div>
+</section>
+`
 };
 
 function router() {

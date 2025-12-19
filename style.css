@@ -660,6 +660,112 @@ header {
   padding: 28px;
   text-align: center;
 }
+/* ================= HOW IT WORKS (PINNED) ================= */
+
+.how-it-works.pinned {
+  position: sticky;
+  top: 72px;                 /* ✔ match header height */
+  min-height: calc(100vh - 72px);
+  background: linear-gradient(90deg, #ffffff 0%, #eff6ff 100%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Grid layout */
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 60px;
+  align-items: center;
+}
+
+/* Image */
+.how-it-works-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.15);
+}
+
+/* Content */
+.how-it-works-content .eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.how-it-works-content h2 {
+  font-size: clamp(2rem, 2.4vw + 1rem, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.how-it-works-content .intro {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+/* Steps */
+.how-steps {
+  list-style: none;
+  margin-bottom: 32px;
+  padding: 0;
+}
+
+.how-steps li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.how-steps span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  min-width: 32px;
+}
+
+.how-steps strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: var(--text-main);
+}
+
+.how-steps div {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Spacer controls scroll duration */
+.how-it-works-spacer {
+  height: 140vh; /* 👈 increase for longer pin */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .how-it-works-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .how-it-works.pinned {
+    position: relative;
+  }
+
+  .how-it-works-spacer {
+    display: none;
+  }
+}
 
 /* ================= TRUST ================= */
 
@@ -670,6 +776,19 @@ header {
   z-index: 2;   
   padding:7%;
 }
+
+/* Secondary button (ghost look) */
+.trust button:last-child {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: none;
+  color: black;
+}
+
+.trust button:last-child:hover {
+  background: rgba(15, 23, 42, 0.55);
+}
+
 /* ================= CLIENT LOGO SLIDER ================= */
 
 .clients-slider-section {
@@ -786,6 +905,114 @@ header {
   }
 }
 
+/* ================= PRODUCT PAGES ================= */
+
+.product-hero {
+  padding: 120px 0;
+  background: linear-gradient(90deg, #ffffff 0%, #eff6ff 100%);
+}
+
+.product-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.product-hero-content .eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.product-hero-content h1 {
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
+  margin-bottom: 16px;
+}
+
+.product-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.product-hero-media img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.15);
+}
+
+.product-section {
+  padding: 100px 20px;
+}
+
+.bg-soft {
+  background: #f5f6f7;
+}
+
+.narrow {
+  max-width: 800px;
+  margin: auto;
+}
+
+.section-lead {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.process-list,
+.audience-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.process-list li,
+.audience-list li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.product-cta {
+  background: linear-gradient(135deg, #0b63ce, #22c55e);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.product-cta p {
+  margin: 16px 0 26px;
+}
+
 /* ================= FOOTER ================= */
 
 footer {
@@ -793,6 +1020,7 @@ footer {
   color: rgba(241, 245, 249, 0.9);
   padding: 70px 20px 30px;
   font-size: 0.9rem;
+  z-index: 2;
 }
 
 .footer-grid {
