@@ -668,6 +668,7 @@ header {
   text-align: center;
   position: relative;          /* REQUIRED */
   z-index: 2;   
+  padding:7%;
 }
 /* ================= CLIENT LOGO SLIDER ================= */
 
@@ -675,6 +676,8 @@ header {
   background: #f9fafb;
   padding: 90px 0;
   border-top: 1px solid #e5e7eb;
+  z-index: 2;
+  position: relative;
 }
 
 .clients-header {

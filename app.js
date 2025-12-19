@@ -13,7 +13,6 @@ const pages = {
     </p>
     <div class="hero-home-actions">
       <button class="btn-primary">Request a Demo</button>
-      <button class="btn-primary">Explore Our Platform</button>
     </div>
   </div>
 </section>
