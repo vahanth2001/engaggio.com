@@ -2541,30 +2541,3 @@ section {
     width: 160px;
   }
 }
-
-
-/* ===================== SMALL MOBILE (≤480px) ===================== */
-
-@media (max-width: 480px) {
-
-  .hero-home {
-    padding: 100px 16px 70px;
-  }
-
-  .hero-home-content {
-    padding: 0;
-  }
-
-  .page-hero {
-    padding: 100px 16px 80px;
-  }
-
-  /* Optional: hide social icons for ultra-small screens */
-  .header-social {
-    display: none;
-  }
-
-  .nav-links {
-    max-width: 100%;
-  }
-}
