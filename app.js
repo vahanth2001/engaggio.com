@@ -32,7 +32,7 @@ const pages = {
     <div class="platforms-grid">
 
       <!-- CADMUS -->
-      <div class="platform-card highlight">
+      <div class="platform-card">
         <h3>CADMUS</h3>
         <p>
           Student engagement and wellbeing intelligence beyond academics —
@@ -145,64 +145,6 @@ const pages = {
     </div>
   </div>
 </section>
-<!-- PINNED HOW IT WORKS -->
-<section class="how-it-works pinned">
-  <div class="container how-it-works-grid">
-
-    <div class="how-it-works-media">
-      <img src="assets/home1.png" alt="Professional working with technology" />
-    </div>
-
-    <div class="how-it-works-content">
-      <div class="eyebrow">HOW IT WORKS</div>
-
-      <h2>
-        Turning human insight into<br />
-        responsible action.
-      </h2>
-
-      <p class="intro">
-        Engaggio helps organisations listen to people, understand behaviour,
-        and act ethically to improve outcomes across learning and work.
-      </p>
-
-      <ul class="how-steps">
-        <li>
-          <span>01</span>
-          <div>
-            <strong>Listen</strong>
-            Capture engagement, wellbeing, and behavioural signals with
-            consent-led, privacy-first design.
-          </div>
-        </li>
-
-        <li>
-          <span>02</span>
-          <div>
-            <strong>Understand</strong>
-            Apply people intelligence and ethical AI to surface patterns,
-            risks, and opportunities.
-          </div>
-        </li>
-
-        <li>
-          <span>03</span>
-          <div>
-            <strong>Act</strong>
-            Enable leaders and institutions to take timely, informed,
-            and responsible action.
-          </div>
-        </li>
-      </ul>
-
-      <button class="btn-primary">Request a Demo</button>
-    </div>
-
-  </div>
-</section>
-
-<!-- REQUIRED SPACER -->
-<div class="how-it-works-spacer"></div>
 
 <!-- TRUST -->
 <section class="trust">
