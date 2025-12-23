@@ -873,7 +873,7 @@ header {
     flex-direction: row;
     margin: 5%;
     max-width:none;
-    color: #ffffff;
+    color: rgba(255,255,255,1);
 }
 
 .product-hero-content .eyebrow {
