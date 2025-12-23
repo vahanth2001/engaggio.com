@@ -870,7 +870,7 @@ header {
     gap: 60px;
     align-items: center;
     display:flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     margin: 5%;
     max-width:none;
     color: #ffffff;
