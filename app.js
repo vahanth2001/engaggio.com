@@ -634,7 +634,7 @@ const pages = {
   decode:`
   <!-- ================= DECODE HERO ================= -->
 <section class="product-hero-decode">
-  <div class="container product-hero-grid">
+  <div class="container product-hero-grid-decode">
 
     <div class="product-hero-content">
       <div class="eyebrow">DECODE</div>
