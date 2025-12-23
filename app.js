@@ -473,8 +473,8 @@ const pages = {
   `,
 
   cadmus:`
-  <section class= "product-hero">
-  <div class="container product-hero-grid">
+  <section class= "product-hero-cadmus">
+  <div class="container product-hero-grid-cadmus">
 
     <div class="product-hero-content">
       <span class="eyebrow">CADMUS PLATFORM</span>
@@ -492,14 +492,9 @@ const pages = {
 
       <div class="product-actions">
         <button class="btn-primary">Request a Demo</button>
-        <button class="btn-outline">Talk to Us</button>
+        <button class="btn-outline-cadmus">Talk to Us</button>
       </div>
     </div>
-
-    <div class="product-hero-media">
-      <img src="assets/cadmus-hero.png" alt="Student wellbeing intelligence illustration" />
-    </div>
-
   </div>
 </section>
 
@@ -638,7 +633,7 @@ const pages = {
 
   decode:`
   <!-- ================= DECODE HERO ================= -->
-<section class="product-hero decode-hero">
+<section class="product-hero-decode">
   <div class="container product-hero-grid">
 
     <div class="product-hero-content">
@@ -653,10 +648,6 @@ const pages = {
         <button class="btn-primary">Book a Demo</button>
         <button class="btn-outline">Talk to Us</button>
       </div>
-    </div>
-
-    <div class="product-hero-media">
-      <img src="assets/decode-hero.png" alt="Enterprise engagement analytics dashboard" />
     </div>
 
   </div>

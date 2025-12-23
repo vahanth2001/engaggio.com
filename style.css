@@ -795,23 +795,38 @@ header {
 
 /* ================= PRODUCT PAGES ================= */
 
-.product-hero {
+.product-hero-cadmus {
   padding: 120px 0;
-  background: linear-gradient(90deg, #ffffff 0%, #eff6ff 100%);
+  position: relative;
+  background-image:
+    linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.3) 65%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url("./assets/cadmushero.jpeg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
-.product-hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 60px;
-  align-items: center;
+.product-hero-grid-cadmus {
+    gap: 60px;
+    align-items: center;
+    display:flex;
+    flex-direction: row-reverse;
+    margin: 5%;
+    max-width:none;
+    color: #ffffff;
 }
 
 .product-hero-content .eyebrow {
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   font-weight: 700;
-  color: var(--primary-blue);
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
@@ -822,7 +837,7 @@ header {
 
 .product-sub {
   font-size: 1.05rem;
-  color: var(--text-muted);
+  color: #ffffff;
   max-width: 520px;
   margin-bottom: 28px;
 }
@@ -832,13 +847,6 @@ header {
   gap: 16px;
   flex-wrap: wrap;
 }
-
-.product-hero-media img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.15);
-}
-
 .product-section {
   padding: 100px 20px;
 }
@@ -864,7 +872,7 @@ header {
 }
 
 .feature-card {
-  background: #fff;
+  background: rgb(255, 255, 255);
   border: 1px solid var(--border-soft);
   border-radius: 16px;
   padding: 26px;
@@ -899,6 +907,15 @@ header {
 
 .product-cta p {
   margin: 16px 0 26px;
+}
+
+.btn-outline-cadmus {
+  color: rgb(255, 255, 255);
+  background: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 /* ================= PRODUCT HERO ================= */
@@ -942,13 +959,6 @@ header {
   gap: 14px;
   flex-wrap: wrap;
 }
-
-.product-hero-media img {
-  width: 100%;
-  border-radius: 22px;
-  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.4);
-}
-
 
 /* ================= PRODUCT SECTIONS ================= */
 
