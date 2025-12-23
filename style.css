@@ -822,6 +822,60 @@ header {
     color: #ffffff;
 }
 
+.product-hero-cadmus {
+  padding: 120px 0;
+  position: relative;
+  background-image:
+    linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.3) 65%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url("./assets/cadmushero.jpeg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.product-hero-grid-cadmus {
+    gap: 60px;
+    align-items: center;
+    display:flex;
+    flex-direction: row-reverse;
+    margin: 5%;
+    max-width:none;
+    color: #ffffff;
+}
+
+.product-hero-decode {
+  padding: 120px 0;
+  position: relative;
+  background-image:
+    linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.3) 65%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url("./assets/decode.jpeg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.product-hero-grid-decode {
+    gap: 60px;
+    align-items: center;
+    display:flex;
+    flex-direction: row-reverse;
+    margin: 5%;
+    max-width:none;
+    color: #ffffff;
+}
+
 .product-hero-content .eyebrow {
   font-size: 0.75rem;
   letter-spacing: 0.18em;
