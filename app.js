@@ -19,31 +19,30 @@ const pages = {
 
 <!-- PLATFORMS -->
 <section class="platforms-section">
-  <div class="container">
+  <div class="container-section">
 
     <div class="section-title">
       <h2>Our Platforms</h2>
-      <p>
-        Purpose-built intelligence platforms designed to understand humans across
-        learning and work.
+      <p>Engaggio builds purpose-driven intelligence platforms that translate human behaviour into clear, actionable insight. Our solutions are designed to uncover patterns that traditional systems miss—helping organisations and learning ecosystems move from intuition to evidence-based decisions.</p>
+      <p>Each platform is built on IP-protected methodologies, combining behavioural science, advanced analytics, and AI-assisted interpretation to deliver intelligence that is ethical, explainable, and trusted.
       </p>
     </div>
 
     <div class="platforms-grid">
 
-      <!-- CADMUS -->
+      <!-- AIDORA -->
       <div class="platform-card">
-        <h3>CADMUS</h3>
+        <h3><img src="assets/Aidora.png" alt="AIDORA"></h3>
         <p>
           Student engagement and wellbeing intelligence beyond academics —
           enabling early intervention and responsible decision-making.
         </p>
-        <a href="#" class="platform-link">Explore CADMUS →</a>
+        <a href="#" class="platform-link">Explore AIDORA →</a>
       </div>
 
       <!-- DECODE -->
       <div class="platform-card">
-        <h3>DECODE</h3>
+        <h3><img src="assets/Decode.png" alt="DECODE"></h3>
         <p>
           Employee engagement and sentiment intelligence that helps leaders
           understand culture, motivation, and performance drivers.
@@ -172,27 +171,19 @@ const pages = {
 
           <!-- LOGO CARD -->
           <div class="client-card">
-            <img src="assets/logos/client1.png" alt="Client 1">
+            <img src="assets/client1.png" alt="Client 1">
           </div>
 
           <div class="client-card">
-            <img src="assets/logos/client2.png" alt="Client 2">
+            <img src="assets/client2.png" alt="Client 2">
           </div>
 
           <div class="client-card">
-            <img src="assets/logos/client3.png" alt="Client 3">
+            <img src="assets/client3.png" alt="Client 3">
           </div>
 
           <div class="client-card">
-            <img src="assets/logos/client4.png" alt="Client 4">
-          </div>
-
-          <div class="client-card">
-            <img src="assets/logos/client5.png" alt="Client 5">
-          </div>
-
-          <div class="client-card">
-            <img src="assets/logos/client6.png" alt="Client 6">
+            <img src="assets/client4.png" alt="Client 4">
           </div>
 
         </div>
@@ -311,50 +302,72 @@ const pages = {
   `,
 
   insights: `
-<!-- HERO -->
+<body>
+
+<!-- ================= HERO ================= -->
 <section class="page-hero insights-hero">
   <div class="container">
     <div class="breadcrumb">Insights</div>
+
     <h1>Insights on People, Performance & Ethical AI</h1>
+
     <p>
-      Research, thinking, and perspectives on engagement, wellbeing,
-      and the future of work and learning.
+      Research, thinking, and real-world perspectives on engagement,
+      wellbeing, and responsible people intelligence.
     </p>
   </div>
 </section>
 
-<!-- INSIGHTS OVERVIEW -->
+<!-- ================= INSIGHTS OVERVIEW ================= -->
 <section class="page-features">
   <div class="container grid-3">
+
     <div class="card">
       <h3>Research</h3>
-      <p>Evidence-based insights into engagement, wellbeing, and behaviour.</p>
+      <p>
+        Evidence-based frameworks grounded in behavioural science,
+        organisational psychology, and longitudinal data.
+      </p>
     </div>
+
     <div class="card">
       <h3>Perspectives</h3>
-      <p>Thought leadership on ethical AI and people intelligence.</p>
+      <p>
+        Thought leadership on ethical AI, engagement intelligence,
+        and responsible data use.
+      </p>
     </div>
+
     <div class="card">
       <h3>Case Studies</h3>
-      <p>Real-world applications across education and enterprise.</p>
+      <p>
+        Practical applications across education and enterprise,
+        with measurable outcomes.
+      </p>
     </div>
+
   </div>
 </section>
 
-<!-- BLOG -->
+<!-- ================= BLOG ================= -->
 <section class="insights-section">
   <div class="container">
+
     <div class="section-title">
       <h2>Blog</h2>
-      <p>Latest thinking from Engaggio on people intelligence and ethics.</p>
+      <p>
+        Latest thinking from Engaggio on engagement, wellbeing,
+        and ethical people intelligence.
+      </p>
     </div>
 
     <div class="grid-3">
+
       <article class="card insight-card">
         <h3>Why Engagement Data Needs Context</h3>
         <p>
-          Understanding behaviour requires more than scores —
-          it requires ethical interpretation.
+          Behavioural data without interpretation can mislead.
+          True insight comes from understanding patterns — not scores.
         </p>
         <a href="#" class="text-link">Read Article →</a>
       </article>
@@ -362,7 +375,8 @@ const pages = {
       <article class="card insight-card">
         <h3>The Future of Ethical AI at Work</h3>
         <p>
-          How organisations can use AI responsibly without eroding trust.
+          How organisations can leverage AI for insight
+          without eroding trust, consent, or autonomy.
         </p>
         <a href="#" class="text-link">Read Article →</a>
       </article>
@@ -370,85 +384,108 @@ const pages = {
       <article class="card insight-card">
         <h3>Wellbeing Beyond Surveys</h3>
         <p>
-          Moving from reactive measurement to proactive insight.
+          Moving from retrospective feedback
+          to continuous, intelligence-led understanding.
         </p>
         <a href="#" class="text-link">Read Article →</a>
       </article>
+
     </div>
   </div>
 </section>
 
-<!-- CASE STUDIES -->
+<!-- ================= CASE STUDIES ================= -->
 <section class="insights-section alt">
   <div class="container">
+
     <div class="section-title">
       <h2>Case Studies</h2>
-      <p>How institutions and enterprises apply Engaggio in practice.</p>
+      <p>
+        How organisations apply Engaggio’s platforms
+        in complex, real-world environments.
+      </p>
     </div>
 
     <div class="grid-3">
+
       <article class="card insight-card">
-        <h3>University Wellbeing Intervention</h3>
+        <h3>Strengthening Workforce Stability in Construction</h3>
         <p>
-          Using CADMUS to identify disengagement early and support students.
+          How DECODE enabled a large, multi-site construction enterprise
+          to identify engagement and stress patterns early —
+          without disrupting operations.
         </p>
         <a href="#" class="text-link">View Case Study →</a>
       </article>
 
       <article class="card insight-card">
-        <h3>Enterprise Engagement Transformation</h3>
+        <h3>Transforming Engagement in a Technology Organisation</h3>
         <p>
-          How DECODE helped leaders connect culture with performance.
+          Moving from annual surveys to continuous engagement intelligence,
+          improving manager confidence and team stability.
         </p>
         <a href="#" class="text-link">View Case Study →</a>
       </article>
 
       <article class="card insight-card">
-        <h3>Responsible AI Rollout</h3>
+        <h3>Responsible AI in People Intelligence</h3>
         <p>
-          Embedding trust, consent, and transparency in people intelligence.
+          Embedding privacy, consent, and explainability
+          into AI-assisted engagement insights.
         </p>
         <a href="#" class="text-link">View Case Study →</a>
       </article>
+
     </div>
   </div>
 </section>
 
-<!-- RESEARCH / RESOURCES -->
+<!-- ================= RESEARCH & RESOURCES ================= -->
 <section class="insights-section">
   <div class="container">
+
     <div class="section-title">
       <h2>Research & Resources</h2>
-      <p>Whitepapers, reports, and frameworks grounded in evidence.</p>
+      <p>
+        Whitepapers, reports, and frameworks grounded in
+        behavioural science and ethical design.
+      </p>
     </div>
 
     <div class="grid-3">
+
       <article class="card insight-card">
         <h3>Engagement & Wellbeing Framework</h3>
         <p>
-          A research-backed model for understanding human engagement.
+          A research-backed model for understanding engagement,
+          stability, and motivation over time.
         </p>
         <a href="#" class="text-link">Download PDF →</a>
       </article>
 
       <article class="card insight-card">
-        <h3>Ethical AI Principles</h3>
+        <h3>Ethical AI Principles for People Intelligence</h3>
         <p>
-          Designing people intelligence with responsibility and trust.
+          Design principles for transparency, consent,
+          and responsible AI-assisted interpretation.
         </p>
         <a href="#" class="text-link">Download PDF →</a>
       </article>
 
       <article class="card insight-card">
-        <h3>Future of Work Report</h3>
+        <h3>Future of Work & Engagement Report</h3>
         <p>
-          Trends shaping engagement, leadership, and performance.
+          Trends shaping leadership, engagement,
+          and organisational resilience.
         </p>
         <a href="#" class="text-link">Download PDF →</a>
       </article>
+
     </div>
   </div>
 </section>
+
+</body>
 `,
 
   contact: `
@@ -460,101 +497,119 @@ const pages = {
   </div>
 </section>
 
-<section class="contact-section">
+<<section class="contact-section">
   <div class="container">
+
+    <div class="contact-illustration">
+      <img src="./assets/connect.png" alt="Let’s connect illustration" />
+    </div>
+
     <form class="contact-form">
       <input type="text" placeholder="Full Name" required />
       <input type="email" placeholder="Work Email" required />
       <textarea placeholder="How can we help?" rows="4"></textarea>
       <button class="btn-primary">Submit Request</button>
     </form>
+
   </div>
 </section>
   `,
 
   cadmus:`
-  <section class= "product-hero-cadmus">
-  <div class="container product-hero-grid-cadmus">
+<body>
 
+<!-- ================= AIDORA HERO ================= -->
+<section class="product-hero-cadmus">
+  <div class="container product-hero-grid-cadmus">
     <div class="product-hero-content">
-      <span class="eyebrow">CADMUS PLATFORM</span>
+
+      <span class="eyebrow">AIDORA PLATFORM</span>
 
       <h1>
-        Understanding learners<br />
+        Measuring what matters —<br />
         beyond academics.
       </h1>
 
       <p class="product-sub">
-        CADMUS is the world’s first holistic engagement intelligence platform
-        designed to understand emotional, social, and behavioural wellbeing —
-        ethically, responsibly, and without academic judgement.
+        AIDORA is the world’s first holistic engagement intelligence platform
+        designed to understand students beyond academics —
+        emotionally, socially, and behaviourally.
       </p>
 
       <div class="product-actions">
         <button class="btn-primary">Request a Demo</button>
         <button class="btn-outline-cadmus">Talk to Us</button>
       </div>
+
     </div>
   </div>
 </section>
 
-
-<!-- WHY CADMUS -->
-<section class="product-section bg-soft">
+<!-- ================= WHY AIDORA ================= -->
+<section class="product-section">
   <div class="container narrow">
 
-    <h2 class="section-title">Why CADMUS</h2>
+    <h2 class="section-title">Why AIDORA</h2>
 
-    <p class="section-lead">
+    <p>
       Learning outcomes are shaped long before grades appear.
-      Emotional wellbeing, belonging, motivation, and confidence
-      determine how learners engage, grow, and perform.
+      Emotional wellbeing, social belonging, motivation, and confidence
+      determine how students engage, grow, and perform.
     </p>
 
     <p>
-      CADMUS makes these invisible factors visible —
-      without diagnosis, labelling, or academic evaluation.
+      AIDORA makes these invisible factors visible —
+      ethically, responsibly, and without academic judgement.
+    </p>
+
+    <p class="section-lead">
+      There are tools for academics, tools for attendance, and tools for counselling.
+      What hasn’t existed until now is a unified intelligence layer that understands
+      the learner as a human being.
+    </p>
+
+    <p>
+      That’s what AIDORA does.
     </p>
 
   </div>
 </section>
 
+<!-- ================= WHAT AIDORA HELPS YOU UNDERSTAND ================= -->
+<section class="product-section bg-soft">
+  <div class="container-aidora">
 
-<!-- WHAT CADMUS HELPS YOU UNDERSTAND -->
-<section class="product-section">
-  <div class="container">
-
-    <h2 class="section-title">What CADMUS Helps You Understand</h2>
+    <h2 class="section-title">What AIDORA Helps You Understand</h2>
 
     <div class="feature-grid">
 
       <div class="feature-card">
-        <h3>Emotional Wellbeing</h3>
+        <h3>Emotional Wellbeing Insights</h3>
         <p>Early signals around emotional comfort, balance, and stress patterns.</p>
       </div>
 
       <div class="feature-card">
-        <h3>Social Connectedness</h3>
+        <h3>Social Connectedness & Belonging</h3>
         <p>Understand inclusion, peer harmony, and social safety.</p>
       </div>
 
       <div class="feature-card">
-        <h3>Motivation & Engagement</h3>
+        <h3>Motivation & Engagement Signals</h3>
         <p>Track interest, curiosity, and participation trends over time.</p>
       </div>
 
       <div class="feature-card">
-        <h3>Confidence & Resilience</h3>
-        <p>See how learners express themselves and cope with challenges.</p>
+        <h3>Confidence & Resilience Indicators</h3>
+        <p>See how students express themselves and cope with challenges.</p>
       </div>
 
       <div class="feature-card">
-        <h3>Behavioural Stability</h3>
+        <h3>Behavioural Stability Patterns</h3>
         <p>Identify consistency, volatility, and emerging support needs.</p>
       </div>
 
       <div class="feature-card">
-        <h3>AI-Guided Recommendations</h3>
+        <h3>AI-Guided Support Recommendations</h3>
         <p>Clear, age-appropriate guidance for families and institutions.</p>
       </div>
 
@@ -562,18 +617,17 @@ const pages = {
   </div>
 </section>
 
-
-<!-- HOW IT WORKS -->
-<section class="product-section bg-soft">
+<!-- ================= HOW IT WORKS ================= -->
+<section class="product-section">
   <div class="container narrow">
 
-    <h2 class="section-title">How CADMUS Works</h2>
+    <h2 class="section-title">How AIDORA Works</h2>
 
     <ul class="process-list">
-      <li><strong>Secure login</strong> for every learner</li>
-      <li><strong>Short, age-appropriate check-ins</strong></li>
-      <li><strong>Pattern-based analysis</strong> over time</li>
-      <li><strong>Clear reports</strong> for families and institutions</li>
+      <li><strong>Secure individual login</strong> for every student</li>
+      <li><strong>Short, age-appropriate online check-ins</strong></li>
+      <li><strong>Pattern-based intelligence analysis</strong> over time</li>
+      <li><strong>Clear insights</strong> shared with authorised stakeholders</li>
     </ul>
 
     <p class="muted-note">
@@ -583,29 +637,27 @@ const pages = {
   </div>
 </section>
 
-
-<!-- TRUST -->
-<section class="product-section">
+<!-- ================= TRUST & SAFETY ================= -->
+<section class="product-section bg-soft">
   <div class="container narrow">
 
     <h2 class="section-title">Built for Trust & Safety</h2>
 
     <div class="trust-grid">
       <span>Privacy-first & consent-led</span>
-      <span>Role-based access</span>
-      <span>Non-diagnostic insights</span>
+      <span>Role-based access controls</span>
+      <span>Non-diagnostic engagement intelligence</span>
       <span>Child-safe by design</span>
     </div>
 
   </div>
 </section>
 
-
-<!-- WHO IT IS FOR -->
-<section class="product-section bg-soft">
+<!-- ================= WHO IT IS FOR ================= -->
+<section class="product-section">
   <div class="container narrow">
 
-    <h2 class="section-title">Who CADMUS Is For</h2>
+    <h2 class="section-title">Who AIDORA Is For</h2>
 
     <ul class="audience-list">
       <li>Learning institutions & ecosystems</li>
@@ -617,31 +669,44 @@ const pages = {
   </div>
 </section>
 
-
-<!-- FINAL CTA -->
+<!-- ================= FINAL CTA ================= -->
 <section class="product-cta">
   <div class="container narrow">
-    <h2>See CADMUS in Action</h2>
+
+    <h2>See AIDORA in Action</h2>
+
     <p>
-      Experience a responsible, insight-driven approach to learner
-      engagement and wellbeing.
+      Experience a responsible, insight-driven approach to
+      student engagement and wellbeing.
     </p>
+
     <button class="btn-primary">Request a Demo</button>
+
   </div>
 </section>
+
+</body>
 `,
 
   decode:`
-  <!-- ================= DECODE HERO ================= -->
+<body>
+
+<!-- ================= DECODE HERO ================= -->
 <section class="product-hero-decode">
   <div class="container product-hero-grid-decode">
 
     <div class="product-hero-content">
-      <div class="eyebrow">DECODE</div>
-      <h1>Employee Engagement Intelligence</h1>
+      <span class="eyebrow">DECODE PLATFORM</span>
+
+      <h1>
+        Employee Engagement Intelligence<br />
+        for High-Performance Organisations
+      </h1>
+
       <p class="intro">
-        Go beyond surveys. Understand engagement through behavioural patterns,
-        analytics, and AI-guided insights — in real time.
+        Go beyond surveys. DECODE transforms behavioural signals into
+        decision-ready engagement intelligence — continuously, ethically,
+        and at enterprise scale.
       </p>
 
       <div class="hero-actions">
@@ -653,80 +718,87 @@ const pages = {
   </div>
 </section>
 
-
 <!-- ================= WHY DECODE ================= -->
 <section class="product-section light">
   <div class="container narrow">
-    <h2>Why DECODE</h2>
+
+    <h2 class="section-title">Why DECODE</h2>
+
     <p>
-      Engagement is dynamic. Annual surveys capture opinions —
-      but miss what’s changing, what’s declining, and where action matters most.
+      Engagement is dynamic. Traditional tools capture opinions after the fact —
+      often influenced by fear, bias, or fatigue.
     </p>
+
     <p>
-      DECODE reveals engagement patterns leaders can actually act on.
+      DECODE uncovers how engagement actually evolves over time, revealing
+      behavioural patterns leaders can act on before performance declines.
     </p>
+
+    <p class="section-lead">
+      Built for organisations that value clarity over noise —
+      and insight over static scores.
+    </p>
+
   </div>
 </section>
 
-
-<!-- ================= WHAT DECODE HELPS YOU SEE ================= -->
+<!-- ================= WHAT DECODE DELIVERS ================= -->
 <section class="product-section">
   <div class="container">
 
     <div class="section-title">
       <h2>What DECODE Helps You See</h2>
-      <p>Outcome-focused engagement intelligence for modern organisations.</p>
+      <p>Outcome-focused engagement intelligence — not just dashboards.</p>
     </div>
 
     <div class="grid-3">
 
       <div class="card">
         <h3>Real-Time Engagement Signals</h3>
-        <p>Understand how engagement evolves across teams, roles, and time.</p>
+        <p>Understand how engagement shifts across teams, roles, and time.</p>
       </div>
 
       <div class="card">
         <h3>Behavioural & Sentiment Patterns</h3>
-        <p>Identify drivers behind morale, motivation, and energy.</p>
+        <p>Identify the drivers behind motivation, morale, and energy.</p>
       </div>
 
       <div class="card">
         <h3>Manager & Team Health Insights</h3>
-        <p>Spot strengths, risks, and improvement opportunities.</p>
+        <p>Spot strengths, overload, and friction early.</p>
       </div>
 
       <div class="card">
-        <h3>Burnout & Overload Indicators</h3>
-        <p>Detect early warning patterns — before performance drops.</p>
+        <h3>Burnout & Risk Indicators</h3>
+        <p>Detect emerging risks before performance drops.</p>
       </div>
 
       <div class="card">
         <h3>Retention & Stability Signals</h3>
-        <p>Understand risk trends without invasive monitoring.</p>
+        <p>Understand attrition risk without invasive monitoring.</p>
       </div>
 
       <div class="card">
-        <h3>AI-Guided Action Recommendations</h3>
-        <p>Practical, role-specific steps for leaders and managers.</p>
+        <h3>AI-Guided Action Intelligence</h3>
+        <p>Clear, role-specific recommendations leaders can act on.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-
 <!-- ================= HOW IT WORKS ================= -->
 <section class="product-section soft">
   <div class="container how-it-works-simple">
 
-    <h2>How DECODE Works</h2>
+    <h2 class="section-title">How DECODE Works</h2>
 
     <div class="steps-grid">
 
       <div class="step">
         <span>01</span>
         <h4>Lightweight Engagement Inputs</h4>
-        <p>Low-friction data collection designed for participation.</p>
+        <p>Low-friction, text-based inputs designed for participation.</p>
       </div>
 
       <div class="step">
@@ -737,277 +809,271 @@ const pages = {
 
       <div class="step">
         <span>03</span>
-        <h4>Clear Dashboards</h4>
-        <p>Actionable views for HR, leaders, and managers.</p>
+        <h4>Behavioural Intelligence Engine</h4>
+        <p>Pattern-based analysis powered by AI-assisted interpretation.</p>
       </div>
 
       <div class="step">
         <span>04</span>
-        <h4>Measurable Improvement</h4>
-        <p>Track progress and outcomes over time.</p>
+        <h4>Action-Ready Dashboards</h4>
+        <p>Clear views for HR, leaders, and managers.</p>
       </div>
 
     </div>
+
+    <p class="muted-note">
+      Built on IP-protected methodologies. Explainable, non-diagnostic,
+      and designed for scale.
+    </p>
+
   </div>
 </section>
-
 
 <!-- ================= ENTERPRISE TRUST ================= -->
 <section class="product-section light">
   <div class="container narrow">
-    <h2>Built for Enterprise Trust</h2>
+
+    <h2 class="section-title">Built for Enterprise Trust</h2>
+
     <ul class="trust-list">
-      <li>Secure and role-based access</li>
-      <li>Audit-ready data handling</li>
-      <li>Scalable across teams and locations</li>
+      <li>Privacy-first, non-invasive by design</li>
+      <li>Role-based access and audit controls</li>
+      <li>Explainable insights — no black boxes</li>
+      <li>Secure, compliant cloud infrastructure</li>
     </ul>
+
   </div>
 </section>
-
 
 <!-- ================= WHO IT'S FOR ================= -->
 <section class="product-section">
   <div class="container narrow">
-    <h2>Who DECODE Is For</h2>
+
+    <h2 class="section-title">Who DECODE Is For</h2>
+
     <ul class="audience-list">
-      <li>HR and People Teams</li>
-      <li>Business and Functional Leaders</li>
-      <li>Organisations focused on performance and retention</li>
+      <li>HR and People teams</li>
+      <li>Business and functional leaders</li>
+      <li>Organisations focused on performance, accountability, and retention</li>
     </ul>
+
   </div>
 </section>
-
 
 <!-- ================= FINAL CTA ================= -->
 <section class="product-cta">
-  <div class="container">
-    <h2>Turn Engagement Insight into Performance</h2>
-    <p>See how DECODE helps organisations move from data to action.</p>
+  <div class="container narrow">
+
+    <h2>Turn Engagement Insight into Action</h2>
+
+    <p>
+      See how DECODE transforms engagement data into
+      measurable organisational outcomes.
+    </p>
+
     <button class="btn-primary">Book a Demo</button>
-  </div>
-</section>
-`,
-Whoarewe: `
-<section class="page-hero">
-  <div class="container">
-    <h1>Who We Are</h1>
-    <p>
-      Engaggio is a people intelligence company helping organisations
-      understand engagement, wellbeing, and behaviour — responsibly.
-    </p>
+
   </div>
 </section>
 
-<!-- ENGAGGIO OVERVIEW -->
-<section id="Engaggiooverview" class="page-section">
-  <div class="container narrow">
-    <h2>Engaggio Overview</h2>
-    <p>
-      Engaggio combines behavioural science, ethical AI, and digital platforms
-      to help organisations make better decisions about people.
-    </p>
-    <p>
-      We operate across education, enterprises, and leadership contexts —
-      always with privacy, consent, and trust at the core.
-    </p>
-  </div>
-</section>
-
-<!-- LEADERSHIP -->
-<section id="leadership" class="page-section soft">
-  <div class="container narrow">
-    <h2>Leadership & HR</h2>
-    <p>
-      We partner with leaders and HR teams to translate people insight
-      into responsible action — from engagement to performance.
-    </p>
-  </div>
-</section>
-
-<!-- MISSION -->
-<section id="Mission" class="page-section">
-  <div class="container narrow">
-    <h2>Mission & Purpose</h2>
-    <p>
-      Our mission is to help organisations understand humans more deeply
-      — and act more responsibly.
-    </p>
-    <ul class="bullets">
-      <li>Human-first intelligence</li>
-      <li>Ethical, consent-led design</li>
-      <li>Insight that drives positive outcomes</li>
-    </ul>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="page-section soft">
-  <div class="container narrow">
-    <h2>Education</h2>
-    <p>
-      Through CADMUS, we help educational institutions understand
-      student wellbeing, engagement, and risk beyond academics.
-    </p>
-  </div>
-</section>
-
-<!-- CAREERS -->
-<section id="careers" class="page-section">
-  <div class="container narrow">
-    <h2>Careers</h2>
-    <p>
-      We’re building a multidisciplinary team passionate about
-      people, ethics, and meaningful technology.
-    </p>
-    <button class="btn-primary">View Open Roles</button>
-  </div>
-</section>
-`,
-
-whatwedo: `
-<section class="page-hero">
-  <div class="container">
-    <h1>What We Do</h1>
-    <p>
-      Purpose-built platforms that turn human insight into action
-      across learning and work.
-    </p>
-  </div>
-</section>
-
-<!-- CADMUS (NO HERO) -->
-<section id="cadmus" class="page-section">
-  <div class="container narrow">
-    <h2>CADMUS</h2>
-    <p class="section-lead">
-      Student engagement and wellbeing intelligence for education.
-    </p>
-
-    <p>
-      CADMUS helps institutions understand how students feel,
-      engage, and behave — ethically and beyond academics.
-    </p>
-
-    <ul class="bullets">
-      <li>Wellbeing & engagement signals</li>
-      <li>Early intervention indicators</li>
-      <li>Privacy-first, consent-led design</li>
-    </ul>
-
-    <a href="#education" class="text-link">View CADMUS in Education →</a>
-  </div>
-</section>
-
-<!-- DECODE (NO HERO) -->
-<section id="decode" class="page-section soft">
-  <div class="container narrow">
-    <h2>DECODE</h2>
-    <p class="section-lead">
-      Workforce engagement and sentiment intelligence for enterprises.
-    </p>
-
-    <p>
-      DECODE helps organisations understand culture, motivation,
-      and performance drivers across teams and locations.
-    </p>
-
-    <ul class="bullets">
-      <li>Engagement & sentiment insights</li>
-      <li>Leadership decision support</li>
-      <li>Responsible people analytics</li>
-    </ul>
-
-    <a href="#enterprise" class="text-link">View DECODE for Enterprises →</a>
-  </div>
-</section>
+</body>
 `,
 
 Engaggiooverview:`
-<section class="page-hero overview-hero">
+<body>
+
+<!-- HERO -->
+<section class="overview-hero">
   <div class="container">
-    <div class="breadcrumb">Who We Are / Engaggio Overview</div>
-    <h1>People Intelligence, Built Responsibly</h1>
+    <h1>Engaggio Intelligence & Analytics</h1>
+
     <p>
-      Engaggio is a people intelligence and AI technology company helping
-      organisations understand engagement, wellbeing, and behaviour —
-      ethically, transparently, and beyond traditional metrics.
+      Engaggio Intelligence & Analytics is a People Intelligence company focused on
+      understanding human engagement, behaviour, and performance through data,
+      behavioural science, and AI-assisted insight.
     </p>
+
+    <p>
+      We help organisations and institutions move beyond surface-level metrics
+      to understand what truly drives productivity, engagement, resilience,
+      and outcomes—across workforces and learning ecosystems.
+    </p>
+
+    <p>
+      At Engaggio, we believe that engagement is not an opinion—it is a pattern.
+      And patterns, when observed responsibly and interpreted intelligently,
+      enable better decisions, healthier environments, and sustained performance.
+    </p>
+
     <button class="btn-primary">Request a Demo</button>
   </div>
 </section>
 
+<!-- WHAT WE DO -->
 <section class="overview-section">
   <div class="container overview-grid">
 
-    <!-- LEFT -->
     <div class="overview-content">
-      <h2>Understanding Humans at Scale</h2>
+      <h2>What We Do</h2>
+
       <p>
-        Engaggio exists to help organisations truly understand people — how they
-        feel, engage, and behave across learning and work environments.
+        Engaggio designs and deploys intelligence systems that transform behavioural
+        signals, engagement data, and contextual inputs into clear, actionable insight.
       </p>
+
       <p>
-        Our platforms combine behavioural science, people analytics, and ethical
-        AI to deliver insight that leaders can trust and act on responsibly.
+        Our solutions are built on behavioural science frameworks, IP-protected
+        analytical methodologies, AI-assisted interpretation (within defined ethical
+        boundaries), and privacy-first, consent-led data governance.
+      </p>
+
+      <p>
+        Rather than replacing human judgment, Engaggio augments leaders, educators,
+        and support teams with continuous, contextual intelligence—so they can act
+        earlier, act better, and act responsibly.
       </p>
     </div>
 
-    <!-- RIGHT -->
     <div class="overview-stats">
       <div class="stat">
-        <strong>Education</strong>
-        <span>Student engagement & wellbeing intelligence</span>
+        <strong>Behavioural Science</strong>
+        <span>Framework-driven engagement understanding</span>
       </div>
       <div class="stat">
-        <strong>Enterprise</strong>
-        <span>Workforce engagement & performance insight</span>
+        <strong>Ethical AI</strong>
+        <span>AI-assisted interpretation within defined boundaries</span>
       </div>
       <div class="stat">
-        <strong>Leadership</strong>
-        <span>Human-centred decision intelligence</span>
+        <strong>Privacy-First</strong>
+        <span>Consent-led, responsible data governance</span>
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- PRODUCT FOCUS -->
+<section class="overview-section">
+  <div class="container overview-grid">
+
+    <div class="overview-content">
+      <h2>Our Product Focus</h2>
+
+      <p>
+        Engaggio currently operates with two core product lines.
+      </p>
+
+      <h3>DECODE</h3>
+      <p>
+        Employee Engagement Intelligence.
+      </p>
+      <p>
+        A continuous engagement intelligence solution that helps organisations
+        understand workforce patterns, performance drivers, and retention risks.
+      </p>
+      <p>
+        DECODE is already in use by select organisations to support leadership
+        decision-making, culture improvement, and productivity outcomes.
+      </p>
+
+      <h3>AIDORA</h3>
+      <p>
+        Learner Engagement & Intelligence.
+      </p>
+      <p>
+        A world-first, holistic engagement intelligence system designed to understand
+        learners beyond academics—focusing on emotional, social, behavioural, and
+        motivational dimensions.
+      </p>
+      <p>
+        AIDORA is built with child-safety, consent, and ethics at its core and
+        represents Engaggio’s long-term vision for responsible people intelligence.
+      </p>
+    </div>
+
+    <div class="overview-stats">
+      <div class="stat">
+        <strong>DECODE</strong>
+        <span>Workforce engagement intelligence</span>
+      </div>
+      <div class="stat">
+        <strong>AIDORA</strong>
+        <span>Learner engagement intelligence</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIFFERENTIATION -->
 <section class="overview-pillars">
+  <h1>How We Are Different</h1>
   <div class="container grid-3">
-
     <div class="card">
-      <h3>Ethical by Design</h3>
+      <h3>Patterns Over Time</h3>
       <p>
-        Consent-led, privacy-first intelligence that respects individuals
-        and organisations alike.
+        We focus on patterns over time, not one-time responses.
       </p>
     </div>
 
     <div class="card">
-      <h3>Science-Led</h3>
+      <h3>Context Over Conclusions</h3>
       <p>
-        Built on behavioural science, psychology, and validated engagement models.
+        We prioritise context over conclusions.
       </p>
     </div>
 
     <div class="card">
-      <h3>Actionable Insight</h3>
+      <h3>Ethics by Design</h3>
       <p>
-        Clear, practical intelligence that enables timely and responsible action.
+        We embed ethics, safety, and privacy by design.
       </p>
     </div>
 
   </div>
 </section>
 
+<!-- PHILOSOPHY -->
+<section class="overview-section">
+  <div class="container">
+    <h2>Our Philosophy</h2>
+
+    <p>Human behaviour is complex.</p>
+    <p>Engagement cannot be reduced to a score.</p>
+    <p>Performance is shaped by unseen factors.</p>
+
+    <p>
+      Engaggio exists to make those factors visible, understandable,
+      and actionable—without oversimplification or intrusion.
+    </p>
+  </div>
+</section>
+
+<!-- LOOKING AHEAD -->
 <section class="overview-cta">
   <div class="container">
-    <h2>Helping organisations act with insight, not assumption.</h2>
+    <h2>Looking Ahead</h2>
+
+    <p>
+      Engaggio is building a focused, vertical intelligence portfolio—deepening
+      capabilities within engagement and behaviour-driven analytics while continuing
+      to invest in research, IP development, and responsible AI practices.
+    </p>
+
+    <p>
+      As we grow, our commitment remains unchanged:
+      Measure what matters. Interpret responsibly. Act with clarity.
+    </p>
+
     <button class="btn-primary">Explore Our Platforms</button>
   </div>
 </section>
+
+</body>
 `,
 
-Mission: `
+
+Mission:`
 <section class="page-hero mission-hero">
   <div class="container">
     <div class="breadcrumb">Company / Mission & Purpose</div>

@@ -1,5 +1,5 @@
 // ===============================
-// HEADER: SEARCH + MOBILE MENU
+// HEADER: SEARCH + MOBILE MENU + SUBMENUS
 // ===============================
 
 const hamburgerBtn = document.getElementById("hamburgerBtn");
@@ -7,8 +7,9 @@ const mobileMenu = document.getElementById("mobileMenu");
 const searchToggle = document.getElementById("searchToggle");
 const searchInput = document.getElementById("searchInput");
 const searchWrapper = document.querySelector(".header-search");
+const dropdownTriggers = document.querySelectorAll(".nav-trigger");
 
-// Search toggle
+// ================= SEARCH =================
 if (searchToggle && searchInput && searchWrapper) {
   searchToggle.addEventListener("click", () => {
     const isOpen = searchWrapper.classList.toggle("active");
@@ -32,20 +33,59 @@ if (searchToggle && searchInput && searchWrapper) {
   });
 }
 
-// Mobile menu
+// ================= MOBILE MENU =================
 if (hamburgerBtn && mobileMenu) {
   hamburgerBtn.addEventListener("click", () => {
     hamburgerBtn.classList.toggle("active");
     mobileMenu.classList.toggle("show");
   });
+}
 
-  mobileMenu.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.remove("show");
-      hamburgerBtn.classList.remove("active");
+// ================= SUBMENUS (MOBILE + TABLET) =================
+dropdownTriggers.forEach(trigger => {
+  trigger.addEventListener("click", (e) => {
+    // Only intercept click on mobile/tablet
+    if (window.innerWidth > 900) return;
+
+    e.preventDefault(); // STOP navigation
+
+    const parentDropdown = trigger.closest(".nav-dropdown");
+
+    // Close other open dropdowns
+    document.querySelectorAll(".nav-dropdown").forEach(drop => {
+      if (drop !== parentDropdown) {
+        drop.classList.remove("open");
+      }
+    });
+
+    // Toggle current dropdown
+    parentDropdown.classList.toggle("open");
+  });
+});
+
+// ================= CLOSE MENU ON LINK CLICK =================
+mobileMenu.querySelectorAll(".dropdown-menu a, .nav-links > a:not(.nav-trigger)").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("show");
+    hamburgerBtn.classList.remove("active");
+
+    // Close all dropdowns
+    document.querySelectorAll(".nav-dropdown").forEach(drop => {
+      drop.classList.remove("open");
     });
   });
-}
+});
+
+// ================= CLOSE MENU ON RESIZE =================
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 900) {
+    mobileMenu.classList.remove("show");
+    hamburgerBtn.classList.remove("active");
+    document.querySelectorAll(".nav-dropdown").forEach(drop => {
+      drop.classList.remove("open");
+    });
+  }
+});
 
 // ===============================
 // SLIDER (HOME PAGE ONLY)
@@ -94,7 +134,7 @@ window.initSlider = function () {
 };
 
 // ===============================
-// CLIENT LOGO SLIDER (4 CARDS)
+// CLIENT LOGO SLIDER (RESPONSIVE)
 // ===============================
 function initClientsSlider() {
   const track = document.getElementById("clientsTrack");
@@ -103,30 +143,51 @@ function initClientsSlider() {
 
   if (!track || !prev || !next) return;
 
-  const cards = track.children;
+  const cards = Array.from(track.children);
   let index = 0;
 
-  function updateSlider() {
-    const cardWidth = cards[0].offsetWidth + 24; // card + gap
-    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  // How many logos visible
+  function visibleCount() {
+    if (window.innerWidth <= 520) return 1;
+    if (window.innerWidth <= 900) return 2;
+    return 3; // desktop
   }
 
-  next.addEventListener("click", () => {
-    if (index < cards.length - 4) {
-      index++;
-      updateSlider();
-    }
-  });
+  function updateSlider() {
+    if (!cards.length) return;
 
-  prev.addEventListener("click", () => {
-    if (index > 0) {
-      index--;
-      updateSlider();
-    }
-  });
+    const gap = 24;
+    const cardWidth = cards[0].offsetWidth + gap;
+    const maxIndex = Math.max(0, cards.length - visibleCount());
+
+    index = Math.min(index, maxIndex);
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+    // Optional: disable buttons at ends
+    prev.disabled = index === 0;
+    next.disabled = index === maxIndex;
+  }
+
+  next.onclick = () => {
+    index++;
+    updateSlider();
+  };
+
+  prev.onclick = () => {
+    index--;
+    updateSlider();
+  };
 
   window.addEventListener("resize", updateSlider);
+
+  updateSlider();
 }
+
+// SPA-safe reinit
+window.addEventListener("load", initClientsSlider);
+window.addEventListener("hashchange", () => {
+  setTimeout(initClientsSlider, 80);
+});
 
 // Re-init after SPA page load
 window.addEventListener("load", initClientsSlider);
