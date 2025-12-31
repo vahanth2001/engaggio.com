@@ -325,7 +325,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("assets/homepage.png"); /* ← your 4K image */
+  background-image: url("assets/Homepage.png"); /* ← your 4K image */
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
